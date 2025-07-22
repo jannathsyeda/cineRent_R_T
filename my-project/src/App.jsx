@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import MovieList from "./MovieList";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <MovieList/>
         </div>
       </main>
+      <Footer/>
     </>
   );
 }
