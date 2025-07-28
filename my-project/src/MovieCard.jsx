@@ -20,8 +20,8 @@ export default function MovieCard({ item }) {
     setSelectedMovie(item);
    
   }
-  function HandleAddToCart(e, movieItem){
-    e.stopPropagation()
+  function HandleAddToCart(event, movieItem){
+   event.stopPropagation()
 
     const found = cartData.find((movie)=>{
       return movie.id === movieItem.id
@@ -55,13 +55,14 @@ export default function MovieCard({ item }) {
             <div class="flex items-center space-x-1 mb-5">
               <RatingStar value={item.rating} />
             </div>
-            <button
-              className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
-              href="#"
-            >
-              <img src="./assets/tag.svg" alt="" />
-              <span>{item.price}</span>
-            </button>
+           <button
+                            className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
+                            href="#"
+                            onClick={(e) => HandleAddToCart(e, item)}
+                        >
+                            <img src="./assets/tag.svg" alt="" />
+                            <span>${item.price} | Add to Cart</span>
+                        </button>
           </figcaption>
         </figure>
       </a>
