@@ -3,6 +3,7 @@ import { MovieContext, ThemeContext } from "./Context";
 import { useContext } from "react";
 import { getUrl } from "./ImageUrl/ImageUrl";
 import del from "./assets/delete.svg"
+import { toast } from "react-toastify";
 
 export default function CartDetails({onClose}) {
 
@@ -18,7 +19,7 @@ export default function CartDetails({onClose}) {
        
     )
     setCardData([...deleteData])
-
+toast("delete succesfully")
   }
 
   return (

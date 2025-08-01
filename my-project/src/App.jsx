@@ -8,6 +8,7 @@ import MovieList from "./MovieList";
 import Footer from "./Footer";
 import { MovieContext, ThemeContext } from "./Context";
 import Page from "./Page";
+  import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
     <ThemeContext.Provider value={{darkMode, setDarkMode}}>
     <MovieContext.Provider value={{cartData, setCardData}}>
      <Page/>
+             <ToastContainer />
+
       </MovieContext.Provider>
       </ThemeContext.Provider>
   

@@ -15,7 +15,7 @@
 }
 
 /* Ensure dark mode works globally, including portals */
-html.dark {
+html .dark {
   color-scheme: dark;
 }
 

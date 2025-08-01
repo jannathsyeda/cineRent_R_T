@@ -3,6 +3,7 @@ import { getUrl } from "./ImageUrl/ImageUrl";
 import RatingStar from "./RatingStar";
 import MovieDetailsModal from "./MovieDetailsModal";
 import {MovieContext} from './Context/index'
+import { toast } from "react-toastify";
 
 export default function MovieCard({ item }) {
   const [showModal, setShowModal] = useState(false);
@@ -30,7 +31,9 @@ export default function MovieCard({ item }) {
     if(!found){
       setCardData([...cartData,movieItem]) 
     }else{
-      console.log(`the ${movieItem.title} is already added to the cart.`)
+      toast(`the ${movieItem.title} is already added to the cart.`,{
+        position: "bottom-right",
+      })
     }
   }
 
